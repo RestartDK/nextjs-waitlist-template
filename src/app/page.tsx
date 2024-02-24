@@ -1,9 +1,15 @@
-import Image from "next/image";
+import MaxWidthWrapper from "@/components/maxwidthwrapper";
+import Hero from "@/components/hero";
+import Features from "@/components/features";
+import Video from "@/components/video";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      this is my website
-    </main>
-  );
+  // Now working on Video section
+	return (
+		<MaxWidthWrapper>
+			<Hero />
+			<Video />
+      <Features />
+		</MaxWidthWrapper>
+	);
 }
