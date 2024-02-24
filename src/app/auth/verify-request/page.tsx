@@ -1,4 +1,4 @@
-import MaxWidthWrapper from "@/components/maxwidithwrapper";
+import MaxWidthWrapper from "@/components/maxwidthwrapper";
 
 export default function VerifyRequest() {
   return (

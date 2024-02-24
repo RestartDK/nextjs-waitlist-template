@@ -1,5 +1,5 @@
 import EmailForm from "@/components/email-form";
-import MaxWidthWrapper from "@/components/maxwidithwrapper";
+import MaxWidthWrapper from "@/components/maxwidthwrapper";
 
 export default function Signin() {
   return (
