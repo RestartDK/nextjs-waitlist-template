@@ -4,17 +4,16 @@ import { signIn } from "@/auth";
 import { db } from "@/db";
 import { eq } from "drizzle-orm";
 import { redirect } from "next/navigation";
+import { auth } from "@/auth";
 
 export default async function signInUser(formData: FormData) {
-  const email = formData.get("email") as string;
-  const user = await db.query.users.findFirst({
-    where: ((users) => eq(users.email, email))
-  });
+  const session = await auth();
 
-  // If user is already registered do not let them sign up again
-  if (user) {
-    redirect("/")
+  // If the user is already signed in, redirect to the home page
+  if (session) {
+    redirect("/");
   }
 
+  const email = formData.get("email") as string;
   await signIn("nodemailer", { email, redirectTo: "/" });
 }
