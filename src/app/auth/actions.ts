@@ -1,8 +1,6 @@
 "use server"
 
 import { signIn } from "@/auth";
-import { db } from "@/db";
-import { eq } from "drizzle-orm";
 import { redirect } from "next/navigation";
 import { auth } from "@/auth";
 
