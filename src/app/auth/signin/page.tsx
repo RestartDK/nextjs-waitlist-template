@@ -6,7 +6,7 @@ export default function Signin() {
     <MaxWidthWrapper>
       <main className="mx-auto flex w-full flex-col md:py-32 py-20">
         <div className="flex flex-col p-4 w-full items-center gap-4">
-          <div className="shadow-md border-2 rounded-md w-full md:w-2/3 pb-8">
+          <div className="shadow-md rounded-md w-full md:w-2/3 pb-8">
             <EmailForm />
           </div>
         </div>
