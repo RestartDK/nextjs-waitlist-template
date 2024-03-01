@@ -1,6 +1,7 @@
 import NextAuth, { NextAuthConfig } from "next-auth"
 import { DrizzleAdapter } from "@auth/drizzle-adapter"
 import { sendVerificationRequest } from "@/lib/sendVerificationRequest"
+import { sendWelcomeEmail } from "@/lib/sendWelcomeEmail"
 import { db } from "@/db"
 import Email from "@auth/core/providers/nodemailer"
 
@@ -32,6 +33,15 @@ export const authConfig = {
     signIn: "/auth/signin",
     verifyRequest: "/auth/verify-request",
     error: "/auth/error",
+  },
+  events: {
+    async createUser(message) {
+        const params = {
+          name: message.user.name,
+          email: message.user.email,
+        };
+        await sendWelcomeEmail(params);
+    }
   }
 } satisfies NextAuthConfig
 
