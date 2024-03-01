@@ -1,22 +1,30 @@
-# NextJs Waitlist Template Starter
+# 🕐 NextJs Waitlist Template Starter
 
 This project is meant to help developers get a head start in building the next big thing with first validating their idea with a waitlist.
 
-## Tech Stack
-- Nextjs
-- Resend
-- React Email
-- Planetscale
-- Drizzle
-- Nextauth
+![landing page](/public/landing.png)
 
-## How it Works
+## ⚙️ Tech Stack
+- [Nextjs](https://nextjs.org/)
+- [Resend](https://resend.com/)
+- [React Email](https://react.email/)
+- [Planetscale](https://planetscale.com/)
+- [Drizzle](https://orm.drizzle.team/)
+- [Nextauth](https://authjs.dev/)
 
-NOT DONE
+## 📦 Features
 
-## Getting Started
+- 🔐 User Authentication with Magic Links through Authjs
+- 📩 Welcome emails sent with Resend
+- 🖌️ Make emails in react with React Email
+- 💽 Planetscale as the database
+- 💧 Drizzle as the ORM
+- 🎨 Clean, Modern UI Using 'shadcn-ui'
+- 🔤 100% written in TypeScript
 
-Fill in information in .env.local
+## ✏️ Getting Started
+
+Make a new in a new file called ```.env.local```
 ```
 RESEND_API_KEY=
 AUTH_SECRET=
@@ -29,15 +37,15 @@ EMAIL_SERVER_PORT=
 EMAIL_FROM=
 ```
 
-First, run the development server:
+Run the development server:
 
 ```bash
 bun install
 bun dev
 ```
 
-## Deploy on Vercel
+To preview emails:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+bun email dev
+```
